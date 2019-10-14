@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/todos")
+    fetch("https://murmuring-ocean-63532.herokuapp.com/todos")
       .then(response => response.json())
       .then(data => this.setState({ todos: data }));
   }
@@ -55,7 +55,7 @@ class App extends React.Component {
   };
 
   deleteTodo = id => {
-    fetch(`http://localhost:5000/todo/${id}`, {
+    fetch(`https://murmuring-ocean-63532.herokuapp.com/todo/${id}`, {
       method: "DELETE"
     }).then(
       this.setState({
